@@ -15,154 +15,149 @@
 </head>
 
 <body>
-    <div class="sirena">
-        <div class="luz azul"></div>
-        <div class="luz roja"></div>
-    </div>
-</body>
 
 
-<nav>
-    <h3 class="nombre-server">PuntoRP</h3>
-    <div>
-        <a href="/">Inicio</a>
-        <a href="/tienda">Tienda</a>
-        <a href="/normas">Normas</a>
-        <a href="https://discord.gg/eUejUWDHNc">Contactanos</a>
+    <nav>
+        <h3 class="nombre-server">PuntoRP</h3>
+        <div>
+            <a href="/">Inicio</a>
+            <a href="/tienda">Tienda</a>
+            <a href="/normas">Normas</a>
+            <a href="https://discord.gg/eUejUWDHNc">Contactanos</a>
+        </div>
+        {% if steam_user %}
+        <div style="display:flex; align-items:center; gap:5px;">
+            <img class="steam-avatar" src="{{ steam_user.avatar }}" alt="">
+            <span>{{ steam_user.personaname }}</span>
+            <a href="{{ url_for('logout') }}"><button>Logout</button></a>
+        </div>
+        {% else %}
+        <div class="login-frame">
+            <a href="{{ url_for('login') }}" class="login-link">Iniciar Sesion</a>
+        </div>
+        {% endif %}
+    </nav>
+    <div class="scroll-container">
+        <section class="scroll-section" id="sec-scroll1">
+            <section class="sec1">
+                <h2>PUNTORP</h2>
+                <div class="palabra-dinamica-container">
+                    <p id="palabra-dinamica"></p>
+                </div>
+
+                <div class="sec1-boton" />
+                <a class="boton-flecha" href="#sec-scroll3">Saber más</a>
     </div>
-    {% if steam_user %}
-    <div style="display:flex; align-items:center; gap:5px;">
-        <img class="steam-avatar" src="{{ steam_user.avatar }}" alt="">
-        <span>{{ steam_user.personaname }}</span>
-        <a href="{{ url_for('logout') }}"><button>Logout</button></a>
-    </div>
-    {% else %}
-    <div class="login-frame">
-        <a href="{{ url_for('login') }}" class="login-link">Iniciar Sesion</a>
-    </div>
-    {% endif %}
-</nav>
-<div class="scroll-container">
-    <section class="scroll-section" id="sec-scroll1">
-        <section class="sec1">
-            <h2>PUNTORP</h2>
-            <div class="palabra-dinamica-container">
-                <p id="palabra-dinamica"></p>
+
+    </section>
+    <section class="scroll-section" id="sec-scroll3">
+
+        <div class="quienes-somos">
+            <h2 class="after-main">¿Que es PuntoRP?</h2>
+            <p class="after-main"><i> PuntoRP es un servidor de rol para GTA V que busca ofrecer una experiencia única y
+                    divertida a todos sus jugadores. Nuestro objetivo es crear un ambiente amigable y
+                    colaborativo donde puedas sumergirte en el mundo del roleplay, interactuar con otros
+                    jugadores y vivir aventuras inolvidables.</i></p>
+        </div>
+        <br><br><br><br><br><br>
+        <div>
+            <h3 class="after-main">¿Querés unirte?</h3>
+        </div>
+
+        <div class="contenedor_cajas">
+            <div class="cajas">
+                <h4>🎮 Instalá GTA V</h4>
+
+                <p>Comprá GTA V desde Steam o Epic Games Store y seguí los pasos para instalarlo en tu
+                    PC.
+                </p>
             </div>
 
-            <div class="sec1-boton" />
-            <a class="boton-flecha" href="#sec-scroll3">Saber más</a>
-</div>
+            <div class="cajas">
+                <h4>📥 Instalá FiveM</h4>
+                <p>Descargá el cliente desde <strong><a href="https://fivem.net/">fivem.net</a></strong>
+                    para
+                    poder jugar en servidores de rol con GTA V.
 
-</section>
-<section class="scroll-section" id="sec-scroll3">
+                </p>
+            </div>
 
-    <div class="quienes-somos">
-        <h2 class="after-main">¿Que es PuntoRP?</h2>
-        <p class="after-main"><i> PuntoRP es un servidor de rol para GTA V que busca ofrecer una experiencia única y
-                divertida a todos sus jugadores. Nuestro objetivo es crear un ambiente amigable y
-                colaborativo donde puedas sumergirte en el mundo del roleplay, interactuar con otros
-                jugadores y vivir aventuras inolvidables.</i></p>
+            <div class="cajas">
+                <h4>🔗 Conectate al servidor</h4>
+                <p>Buscá nuestro server en la lista de FiveM o escribí <strong>connect punto.rp</strong>
+                    en
+                    la
+                    consola para entrar directo.</p>
+            </div>
+        </div>
+    </section>
+    <section class="scroll-section" id="sec-scroll2">
+        <br><br>
+        <h2>SUMATE A NUESTRAS REDES!</h2>
+        <div class="contendor-cajas1">
+            <a class="cajas1" href="https://discord.gg/eUejUWDHNc" id="caja1"></a>
+            <a class="cajas1" href="https://www.youtube.com/" id="caja2"></a>
+            <a class="cajas1" href="https://www.tiktok.com/es/" id="caja3"></a>
+        </div>
+        <footer>
+            <div>
+                <p>GTA V PuntoRP <span class="roleplay-footer">ROLEPLAY</span> </p>
+            </div>
+            <div>
+                <p>Made By <i>PuntoRoleplay Dev</i></p>
+            </div>
+            <div class="logos-redes">
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://discord.gg" target="_blank"><i class="fab fa-discord"></i></a>
+            </div>
+        </footer>
+    </section>
+    </section>
     </div>
-    <br><br><br><br><br><br>
-    <div>
-        <h3 class="after-main">¿Querés unirte?</h3>
-    </div>
+    <script>
+        const palabras = [
+            "Comunidad",
+            "Familia",
+            "Risas",
+            "Amigos"
+        ];
 
-    <div class="contenedor_cajas">
-        <div class="cajas">
-            <h4>🎮 Instalá GTA V</h4>
+        const texto = document.getElementById("palabra-dinamica");
+        let palabraIndex = 0;
+        let letraIndex = 0;
+        let borrando = false;
 
-            <p>Comprá GTA V desde Steam o Epic Games Store y seguí los pasos para instalarlo en tu
-                PC.
-            </p>
-        </div>
+        function escribir() {
+            const palabra = palabras[palabraIndex];
 
-        <div class="cajas">
-            <h4>📥 Instalá FiveM</h4>
-            <p>Descargá el cliente desde <strong><a href="https://fivem.net/">fivem.net</a></strong>
-                para
-                poder jugar en servidores de rol con GTA V.
-
-            </p>
-        </div>
-
-        <div class="cajas">
-            <h4>🔗 Conectate al servidor</h4>
-            <p>Buscá nuestro server en la lista de FiveM o escribí <strong>connect punto.rp</strong>
-                en
-                la
-                consola para entrar directo.</p>
-        </div>
-    </div>
-</section>
-<section class="scroll-section" id="sec-scroll2">
-    <br><br>
-    <h2>SUMATE A NUESTRAS REDES!</h2>
-    <div class="contendor-cajas1">
-        <a class="cajas1" href="https://discord.gg/eUejUWDHNc" id="caja1"></a>
-        <a class="cajas1" href="https://www.youtube.com/" id="caja2"></a>
-        <a class="cajas1" href="https://www.tiktok.com/es/" id="caja3"></a>
-    </div>
-    <footer>
-        <div>
-            <p>GTA V PuntoRP <span class="roleplay-footer">ROLEPLAY</span> </p>
-        </div>
-        <div>
-            <p>Made By <i>PuntoRoleplay Dev</i></p>
-        </div>
-        <div class="logos-redes">
-            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
-            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://discord.gg" target="_blank"><i class="fab fa-discord"></i></a>
-        </div>
-    </footer>
-</section>
-</section>
-</div>
-<script>
-    const palabras = [
-        "Comunidad",
-        "Familia",
-        "Risas",
-        "Amigos"
-    ];
-
-    const texto = document.getElementById("palabra-dinamica");
-    let palabraIndex = 0;
-    let letraIndex = 0;
-    let borrando = false;
-
-    function escribir() {
-        const palabra = palabras[palabraIndex];
-
-        if (!borrando) {
-            texto.textContent = palabra.slice(0, letraIndex++);
-            if (letraIndex > palabra.length) {
-                // Pausa antes de borrar
-                borrando = true;
-                setTimeout(escribir, 1000);
-                return;
+            if (!borrando) {
+                texto.textContent = palabra.slice(0, letraIndex++);
+                if (letraIndex > palabra.length) {
+                    // Pausa antes de borrar
+                    borrando = true;
+                    setTimeout(escribir, 1000);
+                    return;
+                }
+            } else {
+                texto.textContent = palabra.slice(0, letraIndex--);
+                if (letraIndex < 0) {
+                    // Cambiar palabra solo cuando ya se borró todo
+                    palabraIndex = (palabraIndex + 1) % palabras.length;
+                    borrando = false;
+                    letraIndex = 0;
+                    setTimeout(escribir, 200); // Pequeña pausa antes de escribir
+                    return;
+                }
             }
-        } else {
-            texto.textContent = palabra.slice(0, letraIndex--);
-            if (letraIndex < 0) {
-                // Cambiar palabra solo cuando ya se borró todo
-                palabraIndex = (palabraIndex + 1) % palabras.length;
-                borrando = false;
-                letraIndex = 0;
-                setTimeout(escribir, 200); // Pequeña pausa antes de escribir
-                return;
-            }
+
+            setTimeout(escribir, borrando ? 50 : 100);
         }
 
-        setTimeout(escribir, borrando ? 50 : 100);
-    }
+        escribir();
 
-    escribir();
-
-</script>
+    </script>
 </body>
 
 </html>
