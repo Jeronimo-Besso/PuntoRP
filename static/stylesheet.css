@@ -103,7 +103,7 @@ body {
     transition: all 0.3s ease;
     z-index: 1;
     animation: flotar 3s ease-in-out infinite;
-    margin-top: 40vh;
+    margin-top: 30vh;
     display: inline-block; /* ← Importante para <a> */
     text-decoration: none;
 }
@@ -196,12 +196,7 @@ nav a{
     align-items: center;
     text-align: center;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      animation: cambiarColor 10s infinite;
-}
-@keyframes cambiarColor {
-  0%   { color: rgb(53, 51, 51); }
-  50%  { color: rgb(8, 8, 8); }
-  100% { color: rgb(109, 109, 109); }
+    color: rgb(109, 109, 109);
 }
 .sec1 h2{
     margin-top: 20vh;
